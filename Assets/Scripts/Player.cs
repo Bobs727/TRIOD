@@ -4,15 +4,31 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    private int speed;
+    private int normalSpeed = 5;
+
     // Start is called before the first frame update
-    void Start()
+   public void Start()
+    {
+       
+    }
+
+    // Update is called once per frame
+    public void Update()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+
+
+public void OnRightButton ()
+{
+    Debug.Log("Right");
+}
+
+public void OnLeftButton ()
+{
+   Debug.Log("Left");
+}
 }
