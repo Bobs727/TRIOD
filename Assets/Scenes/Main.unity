@@ -197,13 +197,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 350364831}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 44, y: -77.90694, z: -116}
+  m_LocalRotation: {x: -0.000015275076, y: -0.018329492, z: 0.00083325634, w: -0.9998317}
+  m_LocalPosition: {x: 0, y: -97, z: -115.999985}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 965852903}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.004, y: 2.101, z: -361.327}
 --- !u!58 &350364834
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -232,6 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e9d9e4ef0ac7dd44ab868442c7233fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 350364831}
 --- !u!1 &502914839
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,7 +407,6 @@ GameObject:
   - component: {fileID: 610565720}
   - component: {fileID: 610565719}
   - component: {fileID: 610565723}
-  - component: {fileID: 610565722}
   m_Layer: 5
   m_Name: LeftButton
   m_TagString: Untagged
@@ -431,7 +431,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -264, y: 258.00012}
+  m_AnchoredPosition: {x: 480.00006, y: 539.9999}
   m_SizeDelta: {x: 960.00024, y: 1079.9998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &610565719
@@ -476,7 +476,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 610565720}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 350364835}
+        m_MethodName: OnLeftButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &610565720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -514,18 +525,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 610565717}
   m_CullTransparentMesh: 0
---- !u!114 &610565722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 610565717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 367a1f0a90fee7844a9ef320d95f21e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &610565723
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -688,7 +687,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -747.99994, y: 287}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1078364237
@@ -892,7 +891,6 @@ GameObject:
   - component: {fileID: 1545242358}
   - component: {fileID: 1545242357}
   - component: {fileID: 1545242361}
-  - component: {fileID: 1545242360}
   m_Layer: 5
   m_Name: RightButton
   m_TagString: Untagged
@@ -917,7 +915,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 263.98, y: 258.00015}
+  m_AnchoredPosition: {x: -480.02, y: 540}
   m_SizeDelta: {x: 960.03723, y: 1079.9996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1545242357
@@ -962,7 +960,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1545242358}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 350364835}
+        m_MethodName: OnRightButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1545242358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1000,18 +1009,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1545242355}
   m_CullTransparentMesh: 0
---- !u!114 &1545242360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1545242355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23dd820269b19704aae0c8355e3819b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1545242361
 BoxCollider2D:
   m_ObjectHideFlags: 0

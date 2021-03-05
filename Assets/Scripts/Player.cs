@@ -4,31 +4,28 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private int speed;
-    private int normalSpeed = 5;
-
-    // Start is called before the first frame update
-   public void Start()
+    public GameObject player;
+    private float _speed;
+    private Vector3 _direction;
+    
+    public void Start()
     {
-       
+       _direction = new Vector3(0f, 0f, 0f);
+       _speed = 0.5f;
     }
 
-    // Update is called once per frame
-    public void Update()
+    private void FixedUpdate() 
     {
-        
+        player.transform.Translate(_direction * Time.deltaTime * _speed);
     }
 
+    public void OnRightButton()
+    {
+        _direction = Vector3.right;
+    }
 
-
-
-public void OnRightButton ()
-{
-    Debug.Log("Right");
-}
-
-public void OnLeftButton ()
-{
-   Debug.Log("Left");
-}
+    public void OnLeftButton()
+    {
+        _direction = Vector3.left;
+    }   
 }
